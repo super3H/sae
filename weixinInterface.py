@@ -15,7 +15,7 @@ class WeixinInterface:
 	def GET(self):
 		#获取输入参数
 		data = web.input()
-		signature = daata.signature
+		signature = data.signature
 		timestamp = data.timestamp
 		nonce = data.nonce		
 		echostr = data.echostr
