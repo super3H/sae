@@ -1,10 +1,10 @@
 # coding: UTF-8
 import os
-
 import sae
 import web
-
 from weixinInterface import WeixinInterface
+
+print 'hello world'
 
 urls = (
 '/weixin','WeixinInterface'
