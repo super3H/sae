@@ -4,7 +4,7 @@ import os
 import sae
 import web
 
-from weixinInterface import WeixinInterface
+from weixinInterface import WeixinInterfac
 
 urls = (
 '/weixin','WeixinInterface'
