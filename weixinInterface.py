@@ -47,7 +47,7 @@ class WeixinInterface:
 				return self.render.reply_text(fromUser,toUser,int(time.time()),replayText)
 			if content.lower().strip() == 'm':
 				musicList = [
-					[r'http://super3h.bj.bcebos.com/%E8%B5%B5%E9%9B%B7-%E6%88%90%E9%83%BD.mp3','成都'.decode('gbk'),'一首关于成都的民谣'.decode('gbk')],
+					[r'http://cdn.sinacloud.net/super3h/爱情.mp3','成都'.decode('gbk'),'一首关于成都的民谣'.decode('gbk')],
 					[r'http://super3h.bj.bcebos.com/%E5%A5%87%E5%A6%99%E8%83%BD%E5%8A%9B%E6%AD%8C%20%E9%99%88%E7%B2%92.mp3','奇妙能力歌'.decode('gbk'),'我有那么多奇妙的能力，却留不住你'.decode('gbk')]
 				
 				]
