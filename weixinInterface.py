@@ -46,7 +46,7 @@ class WeixinInterface:
 				replayText = '2.输入 book 要查询的书名 返回豆瓣图书中结果\n3.输入cls清除查询记录\n4.输入m随机来首音乐听，建议在wifi下听\n5.输入python 进入python常用模块用法查询（未完成）'.decode('gbk')
 				return self.render.reply_text(fromUser,toUser,int(time.time()),replayText)
 			if content.lower().strip() == 'm':
-				musicList = [[r'http://103.43.208.183/m10.music.126.net/20170206195035/fc7a10e2e4f2d590a993af0bfd7af5b8/ymusic/fa90/df9c/59f7/95c4a2802e0b9191ae1a048f127e53c5.mp3','成都'.decode('gbk'),'一首关于成都的民谣'.decode('gbk')]]
+				musicList = [[r'http://bjbgp02.baidupcs.com/file/a42866893b395b638b390b2999a82aba?bkt=p3-0000e2dc4d511afc65aa8573cd780a3bb95b&fid=2351452762-250528-756392114883298&time=1486379415&sign=FDTAXGERLBH-DCb740ccc5511e5e8fedcff06b081203-PRskEwRqkH98GLtNAnlKBOMuTA4%3D&to=fbjbgp&fm=Yan,B,G,bs&sta_dx=12315199&sta_cs=8&sta_ft=mp3&sta_ct=0&sta_mt=0&fm2=Yangquan,B,G,bs&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=0000e2dc4d511afc65aa8573cd780a3bb95b&sl=69926991&expires=8h&rt=pr&r=577196619&mlogid=853467811183288326&vuk=2351452762&vbdid=248539820&fin=%E8%B5%B5%E9%9B%B7-%E6%88%90%E9%83%BD.mp3&fn=%E8%B5%B5%E9%9B%B7-%E6%88%90%E9%83%BD.mp3','成都'.decode('gbk'),'一首关于成都的民谣'.decode('gbk')]]
 				music = random.choice(musicList)
 				musicurl = music[0]
 				musictitle = music[1]
