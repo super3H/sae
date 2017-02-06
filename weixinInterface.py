@@ -51,7 +51,7 @@ class WeixinInterface:
 				musicurl = music[0]
 				musictitle = music[1]
 				musicdes = music[2]
-				return self.render.reply_music(romUser,toUser,int(time.time()),musictitle,musicdes,musicurl)
+				return self.render.reply_music(fromUser,toUser,int(time.time()),musictitle,musicdes,musicurl)
 			return self.render.reply_text(fromUser,toUser,int(time.time()), content)
 		elif msgType == 'image':
 			try:
