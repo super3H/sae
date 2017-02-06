@@ -3,6 +3,6 @@ $def with (toUser,fromUser,createTime,content)
 <ToUserName><![CDATA[$toUser]]></ToUserName>
 <FromUserName><![CDATA[$fromUser]]></FromUserName>
 <CreateTime>$createTime</CreateTime>
-<MsgType><![CDATA[text]]></MsgType>
+<MsgType>text</MsgType>
 <Content><![CDATA[$content]]></Content>
 </xml>
