@@ -46,7 +46,11 @@ class WeixinInterface:
 				replayText = '2.输入 book 要查询的书名 返回豆瓣图书中结果\n3.输入cls清除查询记录\n4.输入m随机来首音乐听，建议在wifi下听\n5.输入python 进入python常用模块用法查询（未完成）'.decode('gbk')
 				return self.render.reply_text(fromUser,toUser,int(time.time()),replayText)
 			if content.lower().strip() == 'm':
-				musicList = [[r'http://super3h.bj.bcebos.com/%E8%B5%B5%E9%9B%B7-%E6%88%90%E9%83%BD.mp3','成都'.decode('gbk'),'一首关于成都的民谣'.decode('gbk')]]
+				musicList = [
+					[r'http://super3h.bj.bcebos.com/%E8%B5%B5%E9%9B%B7-%E6%88%90%E9%83%BD.mp3','成都'.decode('gbk'),'一首关于成都的民谣'.decode('gbk')],
+					[r'http://super3h.bj.bcebos.com/%E5%A5%87%E5%A6%99%E8%83%BD%E5%8A%9B%E6%AD%8C%20%E9%99%88%E7%B2%92.mp3','奇妙能力歌'.decode('gbk'),'我有那么多奇妙的能力，却留不住你'.decode('gbk')]
+				
+				]
 				music = random.choice(musicList)
 				musicurl = music[0]
 				musictitle = music[1]
