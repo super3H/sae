@@ -1,4 +1,4 @@
-name: wxpytest
+name: super3h
 version: 1
  
 libraries:
@@ -7,4 +7,4 @@ libraries:
  
 - name: lxml
   version: "2.3.4"
- 
+
