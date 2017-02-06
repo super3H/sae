@@ -4,7 +4,7 @@ import web
 import lxml.etree as etree
 import time
 import os
-import imgtest.imgtest
+from imgtest import imgtest
 class WeixinInterface:
 	
 	def __init__(self):
