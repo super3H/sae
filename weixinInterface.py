@@ -54,10 +54,10 @@ class WeixinInterface:
 			mscontent = xml.find("Event").text
 			if mscontent == "subscribe":
 				replayText = '欢迎关注本微信，这个微信是本人业余爱好所建立，也是想一边学习Python一边玩的东西,现在还没有什么功能，只有人脸识别功能，以后还会继续努力的'.decode('gbk')
-				return self.render.subscribe_text(fromUser,toUser,int(time.time()),replayText)
+				return self.render.reply_text(fromUser,toUser,int(time.time()),replayText)
 			if mscontent == "unsubscribe":
 				replayText = '我现在功能还很简单，知道满足不了您的需求，但是我会慢慢改进，欢迎您以后再来'.decode('gbk')
-				return self.render.subscribe_text(fromUser,toUser,int(time.time()),replayText)
+				return self.render.reply_text(fromUser,toUser,int(time.time()),replayText)
 		else:
 			pass
 			
