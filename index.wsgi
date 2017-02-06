@@ -1,9 +1,18 @@
 # coding: UTF-8
-import sae#！！！
+import os
 
+import sae
+import web
 
-def application(environ, start_response):#！！！
-    start_response('200 ok', [('content-type', 'text/plain')])#！！！
-    return ['Hello, SAE!']
+from weixinInterface import WeixinInterface
 
-application=sae.create_wsgi_app(application)#！！！
+urls = (
+'/weixin','WeixinInterface'
+)
+
+app_root = os.path.dirname(__file__)
+templates_root = os.path.join(app_root, 'templates')
+render = web.template.render(templates_root)
+
+app = web.application(urls, globals()).wsgifunc()
+application = sae.create_wsgi_app(app)
