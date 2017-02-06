@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import hashlib
 import web
-import lxml
+import lxml.etree as etree
 import time
 import os
 
