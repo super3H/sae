@@ -47,9 +47,9 @@ class WeixinInterface:
 				#拿到系统生成的图片链接
 				picurl = xml.find('PicUrl').text
 				datas = imgtest(picurl)
-				return self.render.reply_text(fromUser, toUser, int(time.time()), unicode('图中人物性别为'+datas[0]+'\n'+'年龄为'+datas[1],errors='ignore'))
+				return self.render.reply_text(fromUser, toUser, int(time.time()), ('图中人物性别为'+datas[0]+'\n'+'年龄为'+datas[1]).decode('gbk'))
 			except:
-				return self.render.reply_text(fromUser, toUser, int(time.time()), unicode('我只能识别人类，不是人的照片就别拿过来了', errors='ignore'))
+				return self.render.reply_text(fromUser, toUser, int(time.time()),  '我只能识别人类，不是人的照片就别拿过来了')
 				
 		else:
 			pass
