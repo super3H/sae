@@ -4,7 +4,7 @@ import web
 import lxml.etree as etree
 import time
 import os
-
+import imgtest.imgtest
 class WeixinInterface:
 	
 	def __init__(self):
@@ -43,7 +43,14 @@ class WeixinInterface:
 			content = xml.find("Content").text
 			return self.render.reply_text(fromUser,toUser,int(time.time()), content)
 		elif msgType == 'image':
-			pass
+			try:
+				#拿到系统生成的图片链接
+				picurl = xml.find('PicUrl').text
+				datas = imgtest(picurl)
+				return self.render.reply_text(fromUser, toUser, int(time.time()), '图中人物性别为'+datas[0]+'\n'+'年龄为'+datas[1])
+			except:
+				return self.render.reply_text(fromUser, toUser, int(time.time()),  '我只能识别人类，不是人的照片就别拿过来了')
+				
 		else:
 			pass
 			
