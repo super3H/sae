@@ -4,6 +4,7 @@ import web
 import lxml.etree as etree
 import time
 import os
+import random
 from imgtest import imgtest
 class WeixinInterface:
 	
