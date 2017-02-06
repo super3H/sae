@@ -47,8 +47,16 @@ class WeixinInterface:
 				return self.render.reply_text(fromUser,toUser,int(time.time()),replayText)
 			if content.lower().strip() == 'm':
 				musicList = [
-					[r'http://cdn.sinacloud.net/super3h/%E7%88%B1%E6%83%85.mp3?KID=sina,2h52m0fNhoTzn5PApHvr&Expires=1486395881&ssig=HttT3tOrNv','成都'.decode('gbk'),'一首关于成都的民谣'.decode('gbk')],
-					[r'http://super3h.bj.bcebos.com/%E5%A5%87%E5%A6%99%E8%83%BD%E5%8A%9B%E6%AD%8C%20%E9%99%88%E7%B2%92.mp3','奇妙能力歌'.decode('gbk'),'我有那么多奇妙的能力，却留不住你'.decode('gbk')]
+					[r'http://cdn.sinacloud.net/super3h/%E8%B5%B5%E9%9B%B7-%E6%88%90%E9%83%BD.mp3?KID=sina,2h52m0fNhoTzn5PApHvr&Expires=1486396834&ssig=Amv0p6bpTP','成都'.decode('gbk'),'一首关于成都的民谣'.decode('gbk')],
+					[r'http://cdn.sinacloud.net/super3h/%E5%A5%87%E5%A6%99%E8%83%BD%E5%8A%9B%E6%AD%8C%20%E9%99%88%E7%B2%92.mp3?KID=sina,2h52m0fNhoTzn5PApHvr&Expires=1486396834&ssig=naNA%2BnoLeX','奇妙能力歌'.decode('gbk'),'我有那么多奇妙的能力，却留不住你'.decode('gbk')],
+					[r'http://cdn.sinacloud.net/super3h/%E4%B8%83%E6%9C%88%E4%B8%8A.mp3?KID=sina,2h52m0fNhoTzn5PApHvr&Expires=1486396834&ssig=10lmgvWDSk','七月上'.decode('gbk'),'我欲乘风破浪，相敬流年，不负相识一场'.decode('gbk')],
+					[r'http://cdn.sinacloud.net/super3h/%E5%88%B0%E4%B8%8D%E4%BA%86.mp3?KID=sina,2h52m0fNhoTzn5PApHvr&Expires=1486396834&ssig=q5Uvmym2dp','到不了'.decode('gbk'),'心这个东西.如果先伤了别人的 总有一天会加倍伤回来的..放心 谁也跑不了'.decode('gbk')],
+					[r'http://cdn.sinacloud.net/super3h/%E5%8D%97%E4%B8%8B.mp3?KID=sina,2h52m0fNhoTzn5PApHvr&Expires=1486396834&ssig=paaVSCLmSP','南下'.decode('gbk'),'生来北方人，不知江南心'.decode('gbk')],
+					[r'http://cdn.sinacloud.net/super3h/%E5%8E%9F%E8%B0%85.mp3?KID=sina,2h52m0fNhoTzn5PApHvr&Expires=1486396834&ssig=JW7EyeexGp','房间'.decode('gbk'),'在这温暖的房间 我们都笑得很甜 一切停格在一瞬'.decode('gbk')],
+					[r'http://cdn.sinacloud.net/super3h/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3?KID=sina,2h52m0fNhoTzn5PApHvr&Expires=1486396834&ssig=HfJSFIkSy5','告白气球'.decode('gbk'),'想喜欢的Ta告白吧'.decode('gbk')],
+					[r'http://cdn.sinacloud.net/super3h/%E6%88%91%E8%A6%81%E4%BD%A0.mp3?KID=sina,2h52m0fNhoTzn5PApHvr&Expires=1486396834&ssig=Jlr9j%2FzEX1','我要你'.decode('gbk'),'我想要更好更圆的月亮， 想要未知的疯狂， 想要声色的张扬， 我想要你。'.decode('gbk')],
+					[r'http://cdn.sinacloud.net/super3h/%E6%98%A5%E5%A4%8F%E7%A7%8B%E5%86%AC%E7%9A%84%E4%BD%A0.mp3?KID=sina,2h52m0fNhoTzn5PApHvr&Expires=1486396834&ssig=wgqRrlxCdY','春夏秋冬的你'.decode('gbk'),'我喜欢 春天的花 夏天的树 秋天的黄昏 冬天的阳光 和 每天的你'.decode('gbk')],
+					[r'http://cdn.sinacloud.net/super3h/%E7%88%B1%E6%83%85.mp3?KID=sina,2h52m0fNhoTzn5PApHvr&Expires=1486396834&ssig=%2B%2FTnudrYIP','爱情'.decode('gbk'),'爱是折磨人的东西,却又舍不得这样放弃'.decode('gbk')]
 				
 				]
 				music = random.choice(musicList)
