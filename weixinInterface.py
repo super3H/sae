@@ -43,7 +43,7 @@ class WeixinInterface:
 		if msgType == 'text':
 			content = xml.find("Content").text
 			if content.lower().strip() == 'help':
-				replayText = '1.输入 天气+城市 返回当天的该城市的天气\n2.输入m随机来首音乐听，建议在wifi下听(苹果手机不提供改功能)\n3.发送图片 可以进行人脸识别\n4.输入时间+城市+城市+工具 例如明天武汉到黄石的火车 发送给您购票链接\n5.输入图片信息  发送给您的图片链接'.decode('gbk')
+				replayText = '1.输入 天气+城市 返回当天的该城市的天气\n2.输入m随机来首音乐听，！！！点击中间暂停键即可收听！！！建议在wifi下听(苹果手机不提供改功能)\n3.发送图片 可以进行人脸识别\n4.输入时间+城市+城市+工具 例如明天武汉到黄石的火车 发送给您购票链接\n5.输入图片信息  发送给您的图片链接'.decode('gbk')
 				return self.render.reply_text(fromUser,toUser,int(time.time()),replayText)
 			if content.lower().strip() == 'm':
 				musicList = [
