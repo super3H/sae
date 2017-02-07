@@ -24,11 +24,9 @@ class TulingAutoReply:
 			# 回复为链接类
             elif js['code'] == 200000:
                 return js['url']
+			# 其他
             elif js['code'] == 302000:
                 return js['list']
-			# 其他
-            else:
-                return None
         except Exception:
             traceback.print_exc()
             return None
