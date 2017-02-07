@@ -68,6 +68,12 @@ class WeixinInterface:
 			replayText = tuling.reply(content)
 			if replayText is None :
 				replayText = '就不能说点能听懂的话么？？'.decode('gbk')
+			elif isinstance(replayText, list):
+				reply = ''
+				for article in replayText:
+					reply += '\n'
+					reply = reply+article['article']+u'\n详情：'+article['detailurl']
+				return self.render.reply_text(fromUser,toUser,int(time.time()),reply)
 			return self.render.reply_text(fromUser,toUser,int(time.time()),replayText)
 		elif msgType == 'image':
 			try:
