@@ -72,7 +72,7 @@ class WeixinInterface:
 				reply = ''
 				for article in replayText:
 					reply += '\n'
-					reply = reply+article['article']+'\nœÍ«È£∫'.decode('gbk')+article['detailurl']
+					reply = reply+article['article']+'\n:'.decode('gbk')+article['detailurl']
 				return self.render.reply_text(fromUser,toUser,int(time.time()),reply)
 			return self.render.reply_text(fromUser,toUser,int(time.time()),replayText)
 		elif msgType == 'image':
