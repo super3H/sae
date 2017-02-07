@@ -6,7 +6,6 @@ import time
 import os
 import random
 from tulingAutoReply import TulingAutoReply
-sys.modules['memcache'] = pylibmc
 class WeixinInterface:
 	
 	def __init__(self):
