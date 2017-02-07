@@ -67,7 +67,7 @@ class WeixinInterface:
 				return self.render.reply_music(fromUser,toUser,int(time.time()),musictitle,musicdes,musicurl)
 			tuling = TulingAutoReply('b2091cea56054fc88d857baf3f926fbd',r'http://www.tuling123.com/openapi/api')
 			replayText = tuling.reply(content)
-			if(replayText is None)
+			if replayText is None :
 				replayText = '就不能说点能听懂的话么？？'.decode('gbk')
 			return self.render.reply_text(fromUser,toUser,int(time.time()),replayText)
 		elif msgType == 'image':
