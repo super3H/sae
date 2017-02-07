@@ -18,15 +18,15 @@ class TulingAutoReply:
             return None
         try:
             js = json.loads(resp)
-			# 文本类
+			# 回复为文本类
             if js['code'] == 100000:
                 return js['text']
-			# 链接类
+			# 回复为链接类
             elif js['code'] == 200000:
                 return js['url']
-			# 新闻类
-            elif js['code'] == 302000:
-                return js['list']
+			# 其他
+            else:
+                return None
         except Exception:
             traceback.print_exc()
             return None
