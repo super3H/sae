@@ -5,7 +5,8 @@ import lxml.etree as etree
 import time
 import os
 import random
-from imgtest import imgtest
+from tulingAutoReply import TulingAutoReply
+sys.modules['memcache'] = pylibmc
 class WeixinInterface:
 	
 	def __init__(self):
@@ -64,7 +65,11 @@ class WeixinInterface:
 				musictitle = music[1]
 				musicdes = music[2]
 				return self.render.reply_music(fromUser,toUser,int(time.time()),musictitle,musicdes,musicurl)
-			return self.render.reply_text(fromUser,toUser,int(time.time()), content)
+			tuling = TulingAutoReply('b2091cea56054fc88d857baf3f926fbd',r'http://www.tuling123.com/openapi/api')
+			replayText = tuling.reply(content)
+			if(replayText == None)
+				replayText = '就不能说点能听懂的话么？？'.decode('gbk')
+			return self.render.reply_text(fromUser,toUser,int(time.time()),replayText)
 		elif msgType == 'image':
 			try:
 				#拿到系统生成的图片链接
