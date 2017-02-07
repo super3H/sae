@@ -70,7 +70,7 @@ class WeixinInterface:
 				replayText = '就不能说点能听懂的话么？？'.decode('gbk')
 			elif isinstance(replayText, list):
 				reply = ''
-				for article in replayText:
+				for article in eplayText:
 					reply = reply+article['article']+'\n:'.decode('gbk')+article['detailurl']+'\n'
 				return self.render.reply_text(fromUser,toUser,int(time.time()),reply)
 			return self.render.reply_text(fromUser,toUser,int(time.time()),replayText)
