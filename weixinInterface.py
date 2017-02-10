@@ -71,7 +71,7 @@ class WeixinInterface:
 			if isinstance(replayText,list):
 				reply = ''
 				for article in replayText:
-					reply = article['article']+'\n详情：'.decode('gbk')+article['detailurl']+'\n'
+					reply += article['article']+'\n详情：'.decode('gbk')+article['detailurl']+'\n'
 				return self.render.reply_text(fromUser,toUser,int(time.time()),reply)
 			if replayText is None :
 				replayText = '就不能说点能听懂的话么？？'.decode('gbk')
