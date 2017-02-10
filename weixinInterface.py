@@ -83,15 +83,6 @@ class WeixinInterface:
 				return self.render.reply_text(fromUser, toUser, int(time.time()), ('图中人物性别为:'+datas[0]+'\n'+'年龄为:'+datas[1]).decode('gbk'))
 			except:
 				return self.render.reply_text(fromUser, toUser, int(time.time()), ('我只能识别人类，不是人的照片就别拿过来了').decode('gbk'))
-
-		elif msgType == 'voice':
-			vcontent = xml.find("recognition").text
-			try:
-				tuling = TulingAutoReply('b2091cea56054fc88d857baf3f926fbd',r'http://www.tuling123.com/openapi/api')
-				replayText = tuling.reply(vcontent)
-				return self.render.reply_text(fromUser,toUser,int(time.time()), replayText)
-			except:
-				return self.render.reply_text(fromUser,toUser,int(time.time()), '就不能讲人话么？？'.decode('gbk'))
 		else:
-			pass
+			return self.render.reply_text(fromUser, toUser, int(time.time()), ('功能只有这么多，能力有限，不好意思').decode('gbk'))
 			
