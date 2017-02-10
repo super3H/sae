@@ -2,7 +2,7 @@
 import json
 import requests
 import traceback
- 
+from random import choice 
 class TulingAutoReply:
     def __init__(self, tuling_key, tuling_url):
         self.key = tuling_key
@@ -25,7 +25,9 @@ class TulingAutoReply:
             elif js['code'] == 200000:
                 return js['url']
             elif js['code'] == 302000:
-                return js['list']
+				articles = js['list']
+                articleList = [article['article']+u'\nœÍ«È£∫'+article['detailurl'] for article in articles]
+                return choice(articleList)
 			# ∆‰À˚
             else:
                 return None
