@@ -24,7 +24,7 @@ class TulingAutoReply:
 			# 回复为链接类
             elif js['code'] == 200000:
                 return js['url']
-            elif code == 302000:
+            elif js['code'] == 302000:
                 return js['text']+js['list'][0]['info']+js['list'][0]['detailurl']
 			# 其他
             else:
