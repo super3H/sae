@@ -69,7 +69,7 @@ class WeixinInterface:
 			tuling = TulingAutoReply('b2091cea56054fc88d857baf3f926fbd',r'http://www.tuling123.com/openapi/api')
 			replayText = tuling.reply(content)
 			if isinstance(replayText,list):
-				articleList = [article['article']+article['detailurl'] for article in replayText]
+				articleList = [article['article']+'ฯ๊ว้'.decode('gbk')+article['detailurl'] for article in replayText]
 				reply = random.choice(articleList)
 				return self.render.reply_text(fromUser,toUser,int(time.time()),reply)
 			if replayText is None :
