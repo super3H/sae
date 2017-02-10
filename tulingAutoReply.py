@@ -26,7 +26,7 @@ class TulingAutoReply:
                 return js['url']
             elif js['code'] == 302000:
 			    return js['list']
-			elif code == 308000:
+			elif js['code'] == 308000:
 			    return j['text']+j['list'][0]['info']+j['list'][0]['detailurl']
 			# ÆäËû
             else:
