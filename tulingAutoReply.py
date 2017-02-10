@@ -25,9 +25,7 @@ class TulingAutoReply:
             elif js['code'] == 200000:
                 return js['url']
             elif js['code'] == 302000:
-			    articles = js['list']
-                articleList = [article['article']+article['detailurl'] for article in articles ]
-                return choice(articleList)
+			    return js['list']
 			# ÆäËû
             else:
                 return None
