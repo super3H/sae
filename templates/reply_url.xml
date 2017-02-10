@@ -8,7 +8,7 @@ $def with (toUser,fromUser,createTime,content,title,description,picUrl,url)
     <ArticleCount>1</ArticleCount>
     <Articles>
         <item>
-            <Title><![CDATA[[$title]]></Title>
+            <Title><![CDATA[$title]]></Title>
             <Description><![CDATA[$description]]>
     </Description>
             <PicUrl><![CDATA[$picUrl]]></PicUrl>
