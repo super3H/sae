@@ -87,10 +87,6 @@ class WeixinInterface:
 			if mscontent == "unsubscribe":
 				replayText = '我现在功能还很简单，知道满足不了您的需求，但是我会慢慢改进，欢迎您以后再来'.decode('gbk')
 				return self.render.reply_text(fromUser,toUser,int(time.time()),replayText)
-		elif msgType == 'voice':
-			content = xml.find('Recognition').text
-			try:
-				tuling = TulingAutoReply('b2091cea56054fc88d857baf3f926fbd',r'http://www.tuling123.com/openapi/api')
 		else:
 			pass
 			
