@@ -85,9 +85,9 @@ class WeixinInterface:
 				return self.render.reply_text(fromUser, toUser, int(time.time()), ('我只能识别人类，不是人的照片就别拿过来了').decode('gbk'))
 
 		elif msgType == 'event':
-			mscontent = xml.find("Event").text
+			vcontent = xml.find("Event").text
 			try:
-                tuling = TulingAutoReply('b2091cea56054fc88d857baf3f926fbd',r'http://www.tuling123.com/openapi/api')
+				tuling = TulingAutoReply('b2091cea56054fc88d857baf3f926fbd',r'http://www.tuling123.com/openapi/api')
 				replayText = tuling.reply(vcontent)
 				return self.render.reply_text(fromUser,toUser,int(time.time()), replayText)
 			except:
