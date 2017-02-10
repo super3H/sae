@@ -65,7 +65,7 @@ class WeixinInterface:
 				musicdes = music[2]
 				return self.render.reply_music(fromUser,toUser,int(time.time()),musictitle,musicdes,musicurl)
 			if content == '博客'.decode('gbk'):
-				return self.render.reply_url(fromUser,toUser,int(time.time()),content,'个人博客'.decode('gbk'),'HHH的个人博客'.decode('gbk'),r'https://github.com/super3H/super3H.github.io/blob/master/img/hhh.jpg',r'http://super3h.github.io')
+				return self.render.reply_url(fromUser,toUser,int(time.time()),content,'个人博客'.decode('gbk'),'HHH的个人博客'.decode('gbk'),r'https://mmbiz.qlogo.cn/mmbiz_jpg/z67Nqg3yAzRNVazozLUD7icuibRJdnCDaJd1dTfQ9673IDS6ttA5cFQwQCic7IrjPhbTcX1ycQDGibJhlGaFbwzyyg/0?wx_fmt=jpeg',r'http://super3h.github.io')
 			tuling = TulingAutoReply('b2091cea56054fc88d857baf3f926fbd',r'http://www.tuling123.com/openapi/api')
 			replayText = tuling.reply(content)
 			if replayText is None :
