@@ -26,7 +26,7 @@ class TulingAutoReply:
                 return js['url']
             elif js['code'] == 302000:
 			    articles = js['list']
-                articleList = [article['article']+'\nœÍ«È£∫'.decode('gbk')+article['detailurl'] for article in articles];
+                articleList = [article['article']+article['detailurl'] for article in articles]
                 return choice(articleList)
 			# ∆‰À˚
             else:
