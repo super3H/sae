@@ -83,16 +83,9 @@ class WeixinInterface:
 				return self.render.reply_text(fromUser, toUser, int(time.time()), ('图中人物性别为:'+datas[0]+'\n'+'年龄为:'+datas[1]).decode('gbk'))
 			except:
 				return self.render.reply_text(fromUser, toUser, int(time.time()), ('我只能识别人类，不是人的照片就别拿过来了').decode('gbk'))
+
 		elif msgType == 'event':
 			mscontent = xml.find("Event").text
-			if mscontent == "subscribe":
-				replayText = '欢迎关注本微信，这个微信是本人业余爱好所建立，也是想一边学习Python一边玩的东西,请输入help查看具体功能，功能不多，以后还会继续努力的'.decode('gbk')
-				return self.render.reply_text(fromUser,toUser,int(time.time()),replayText)
-			if mscontent == "unsubscribe":
-				replayText = '我现在功能还很简单，知道满足不了您的需求，但是我会慢慢改进，欢迎您以后再来'.decode('gbk')
-				return self.render.reply_text(fromUser,toUser,int(time.time()),replayText)
-		elif msgType == 'voice':
-            vcontent = xml.find("Recognition").text
 			try:
                 tuling = TulingAutoReply('b2091cea56054fc88d857baf3f926fbd',r'http://www.tuling123.com/openapi/api')
 				replayText = tuling.reply(vcontent)
