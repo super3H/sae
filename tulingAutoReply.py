@@ -26,7 +26,7 @@ class TulingAutoReply:
                 return js['url']
 			# 回复为新闻类
             elif js['code'] == 302000:
-			    return j['text']+j['list'][0]['info']+j['list'][0]['detailurl']
+			    return j['list']
 			# 其他
             else:
                 return None
