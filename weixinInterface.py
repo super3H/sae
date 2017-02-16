@@ -5,6 +5,7 @@ import lxml.etree as etree
 import time
 import os
 import random
+from imgtest import imgtest
 from tulingAutoReply import TulingAutoReply
 class WeixinInterface:
 	
